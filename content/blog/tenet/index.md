@@ -1,6 +1,6 @@
 ---
 title: Tenet
-date: "2015-05-06T23:46:37.121Z"
+date: "2021-01-02T23:46:37.121Z"
 # tag: Movie
 featuredimage:
   src: "./Tenet_Blog.jpg"
