@@ -1,7 +1,7 @@
 ---
 title: East of Eden
 date: "2020-11-01T22:12:03.284Z"
-# tag: Book
+tag: Book
 featuredimage:
   src: "./EastOfEden_Blog.jpg"
   alt: "A salty egg"

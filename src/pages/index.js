@@ -54,7 +54,8 @@ const BlogIndex = ({ data, location }) => {
                         <span itemProp="headline">{title}</span>
                       </Link>
                     </h2>
-                    <small>{post.frontmatter.date}</small>
+                    <h4 className="post-tag">{post.frontmatter.tag}</h4>
+                    <p className="post-date">{post.frontmatter.date}</p>
                   </header>
                   <section>
                     <p
@@ -93,6 +94,7 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          tag
           featuredimage {
             src {
               childImageSharp {

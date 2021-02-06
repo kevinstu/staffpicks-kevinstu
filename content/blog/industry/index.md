@@ -1,7 +1,7 @@
 ---
 title: Industry
 date: "2021-01-15T22:40:32.169Z"
-# tag: TV
+tag: TV
 featuredimage:
   src: "./industry_blog.jpg"
   alt: "A salty egg"
