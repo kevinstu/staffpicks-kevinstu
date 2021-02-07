@@ -1,13 +1,14 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Img from "gatsby-image"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
+  const featuredimage = post.frontmatter.featuredimage
   const { previous, next } = data
 
   return (
@@ -21,8 +22,17 @@ const BlogPostTemplate = ({ data, location }) => {
         itemScope
         itemType="http://schema.org/Article"
       >
+        <div className="blog-post-image-div" >
+        { featuredimage && (
+              <Img
+                fluid={featuredimage.src.childImageSharp.fluid}
+                alt={featuredimage.alt}
+              />
+            )}
+        </div>
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
+          <h4 className="blog-post-tag">{post.frontmatter.tag}</h4>
           <p>{post.frontmatter.date}</p>
         </header>
         <section
@@ -85,6 +95,17 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        tag
+        featuredimage {
+          src {
+            childImageSharp {
+              fluid(maxWidth: 1024) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          alt
+        }
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

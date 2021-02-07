@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `StaffPicks`,
     author: {
-      name: `Keith Soup`,
+      name: `Kevin Stu`,
       summary: `lives, works, and farts in Cleveland, Ohio. This is where he keeps track of all the shit he watches and reads.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,

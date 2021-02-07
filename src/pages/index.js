@@ -39,11 +39,12 @@ const BlogIndex = ({ data, location }) => {
                 itemScope
                 itemType="http://schema.org/Article"
               >
-              <div className="post-image-div" >
+              <div className="post-list-image-div" >
               { featuredimage && (
                     <Img
                       fluid={featuredimage.src.childImageSharp.fluid}
                       alt={featuredimage.alt}
+                      
                     />
                   )}
               </div>
