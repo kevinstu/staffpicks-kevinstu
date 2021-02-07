@@ -1,7 +1,7 @@
 ---
 title: Search Party
 date: "2021-02-07T23:46:37.121Z"
-tag: Television
+tag: TV
 featuredimage:
   src: "./SearchParty_blog.jpg"
   alt: "Search Party Show Poster"
